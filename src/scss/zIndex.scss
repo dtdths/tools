@@ -1,0 +1,9 @@
+// 管理z-index
+@mixin zIndex($selector) {
+  $elmsZIndex: (
+    "detail/header": 800, // 商详 header
+    "detail/header/menu": 850, // 商详 header左侧menu
+  );
+
+  z-index: map-get($map: $elmsZIndex, $key: $selector);
+}

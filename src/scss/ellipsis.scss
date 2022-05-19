@@ -1,0 +1,17 @@
+// 超出内容显示省略号  @include ellipsis(num)
+@mixin ellipsis($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  @if ($line == 1) {
+    white-space: nowrap;
+  }
+  @else {
+    display: -webkit-box;
+    visibility: visible;
+
+    /*! autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
