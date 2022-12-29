@@ -6,7 +6,7 @@
  */
 const delay = (
   delayTime: number = 25,
-  res: any
+  res?: any
 ): Promise<any> => {
   return new Promise((resolve) => {
     setTimeout(() => {
